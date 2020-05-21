@@ -23,6 +23,19 @@ export default class SignUpComponent extends React.Component {
         <Text style={styles.text}>Sign Up with email</Text>
         <View style={styles.action}>
           <View style={[styles.section, {
+            borderColor: this.state.borderColor=="account-circle" ? '#9256b1' : '#777'
+          }]}>
+            <MaterialIcons name="account-circle" size={20} color={this.state.borderColor=="account-circle" ? '#9256b1' : '#777'} />
+            <TextInput
+              placeholder="Nome"
+              style={[styles.textInput, {
+                color: this.state.borderColor=="account-circle" ? '#9256b1' : '#777'
+              }]}
+              onFocus={()=> this.onFocus("account-circle")}
+              autoCorrect={false}/>
+          </View>
+
+          <View style={[styles.section, {
             borderColor: this.state.borderColor=="email" ? '#9256b1' : '#777'
           }]}>
             <MaterialIcons name="email" size={20} color={this.state.borderColor=="email" ? '#9256b1' : '#777'} />
