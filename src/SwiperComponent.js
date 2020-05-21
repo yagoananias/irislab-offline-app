@@ -2,6 +2,9 @@ import React from 'react';
 import { Text, View, StyleSheet, Image, Dimensions, TouchableOpacity, ImageBackground } from 'react-native';
 import Swiper from 'react-native-swiper'
 import * as Animatable from 'react-native-animatable'
+import LottieView from 'lottie-react-native'
+
+import apolo from '../assets/apolo-animation.json'
 
 
 export default class SwiperComponent extends React.Component {
@@ -55,15 +58,12 @@ export default class SwiperComponent extends React.Component {
         
         <View style={styles.slide}>
           <View style={styles.header}>
-            <Image source={require("../assets/asset2.png")}
-                    style={styles.image}
-                    resizeMode={"stretch"}>
-            </Image>
+          <LottieView source={apolo} resizeMode="cover" style={styles.animaApolo} autoPlay loop />
           </View>
 
           <View style={styles.footer}>
-            <Text style={styles.title}>Turma do Apolo</Text>
-            <Text style={styles.text}>Somos a turma do apolo</Text>
+            <Text style={styles.title}>Olá, eu sou o Apolo!</Text>
+            <Text style={styles.text}>O seu amiguinho :)</Text>
           </View>
         </View>
 
@@ -174,4 +174,8 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     justifyContent: "center"
   },
+  animaApolo: {
+    width: 350,
+    height: 350,    
+  }
 })
