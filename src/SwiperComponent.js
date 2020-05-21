@@ -1,7 +1,8 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image, Dimensions, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, Image, Dimensions, TouchableOpacity, ImageBackground } from 'react-native';
 import Swiper from 'react-native-swiper'
 import * as Animatable from 'react-native-animatable'
+
 
 export default class SwiperComponent extends React.Component {
   constructor(props) {
@@ -37,6 +38,7 @@ export default class SwiperComponent extends React.Component {
     dot={<View style={styles.dot}/>}
     activeDot={<View style={styles.activeDot} />}
     onIndexChanged={(index)=>this.onIndexChanged(index)}>
+      
         <View style={styles.slide}>
           <View style={styles.header}>
             <Image source={require("../assets/asset1.png")}
@@ -65,16 +67,13 @@ export default class SwiperComponent extends React.Component {
           </View>
         </View>
 
-        <View style={styles.slide}>
+        <ImageBackground source={require("../assets/bg3.jpg")} style={styles.slide}>
           <View style={styles.header}>
-            <Image source={require("../assets/asset3.png")}
-                    style={styles.image}
-                    resizeMode={"stretch"}>
-            </Image>
+            
           </View>
 
           <View style={styles.footer}>
-            <Text style={styles.title}>Alguma coisa</Text>
+            <Text style={styles.title}>Faça parte!</Text>
             <Text style={styles.text}>Somos a turma do apolo</Text>
             {this.state.show ?
             <View style={{flexDirection: 'row'}}>
@@ -107,7 +106,7 @@ export default class SwiperComponent extends React.Component {
             :null}
             
           </View>
-        </View>
+        </ImageBackground>
       </Swiper>
     )
   }
@@ -169,5 +168,10 @@ const styles = StyleSheet.create({
     height: 40,
     justifyContent: 'center',
     alignItems: 'center'
-  }
+  },
+  bg: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center"
+  },
 })
