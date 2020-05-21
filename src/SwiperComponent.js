@@ -78,7 +78,7 @@ export default class SwiperComponent extends React.Component {
             <Text style={styles.text}>Somos a turma do apolo</Text>
             {this.state.show ?
             <View style={{flexDirection: 'row'}}>
-              <Animatable.View animation={this.state.animation_signup} delay={0} duration={2500} useNativeDriver>              
+              <Animatable.View animation={this.state.animation_signup} delay={0} duration={1500} useNativeDriver>              
                 <TouchableOpacity
                   onPress={() => this.props.navigation.navigate("SignUpScreen")}
                   style={[styles.button, {
@@ -87,11 +87,11 @@ export default class SwiperComponent extends React.Component {
                   borderRadius: 50,
                   marginTop: 15
                 }]}>
-                  <Text style={{color: 'purple'}}>Entrar</Text>                
+                  <Text style={{color: 'purple'}}>Sign Up</Text>                
                 </TouchableOpacity>
               </Animatable.View>
               
-              <Animatable.View animation={this.state.animation_login} delay={0} duration={2500} useNativeDriver>
+              <Animatable.View animation={this.state.animation_login} delay={0} duration={1500} useNativeDriver>
                 <TouchableOpacity
                   onPress={() => this.props.navigation.navigate("LoginScreen")}
                   style={[styles.button, {
@@ -100,7 +100,7 @@ export default class SwiperComponent extends React.Component {
                   marginTop: 15,
                   marginLeft: 20
                 }]}>                
-                  <Text style={{color: 'white'}}>Cadastre-se</Text>                
+                  <Text style={{color: 'white'}}>Login</Text>                
                 </TouchableOpacity>
               </Animatable.View>
             </View>

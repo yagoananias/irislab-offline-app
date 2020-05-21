@@ -12,6 +12,18 @@ const StackNavigator = createStackNavigator({
     navigationOptions: {
       headerShown: false
     }
+  },
+  LoginScreen: {
+    screen: LoginComponent,
+    navigationOptions: {
+      headerShown: false
+    }
+  },
+  SignUpScreen: {
+    screen: SignUpComponent,
+    navigationOptions: {
+      headerShown: false
+    }
   }
 })
 
