@@ -56,12 +56,21 @@ export default class LoginComponent extends React.Component {
         <TouchableOpacity style={styles.login}>
           <Text style={styles.textLogin}>Login</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity
+            style={styles.voltar}
+            onPress={() => this.props.navigation.navigate("SwiperScreen")}>
+            <Text style={styles.textVoltar}>Voltar</Text>
+          </TouchableOpacity>
+
         <View style={styles.signup}>
           <Text style={[styles.textSignup], {color: '#777'}}>Não possui uma conta?</Text>
           <TouchableOpacity
           onPress={() => this.props.navigation.navigate("SignUpScreen")}>
             <Text style={[styles.textSignup, {color: '#9256b1', marginLeft: 3}]}>Criar conta</Text>
           </TouchableOpacity>
+
+          
         </View>
       </View>
     )
@@ -123,5 +132,22 @@ const styles = StyleSheet.create({
   },
   textSignup: {
     textAlign: 'center'
+  },
+  voltar: {
+    width: '30%',
+    height: 40,
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+    marginTop: 25,
+    borderWidth: 0,
+    borderRadius: 50,
+    borderColor: '#4256b1'
+  },
+  textVoltar: {
+    color: '#4256b1',
+    fontSize: 13,
+    fontWeight: '100'
   }
 })
