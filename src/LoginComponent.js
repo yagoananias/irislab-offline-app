@@ -60,6 +60,7 @@ export default class LoginComponent extends React.Component {
         <TouchableOpacity
             style={styles.voltar}
             onPress={() => this.props.navigation.navigate("SwiperScreen")}>
+            <MaterialIcons name="arrow-back" size={10} />
             <Text style={styles.textVoltar}>Voltar</Text>
           </TouchableOpacity>
 
@@ -137,6 +138,7 @@ const styles = StyleSheet.create({
     width: '30%',
     height: 40,
     backgroundColor: 'white',
+    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
