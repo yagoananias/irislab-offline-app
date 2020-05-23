@@ -4,6 +4,7 @@ import { createStackNavigator } from 'react-navigation-stack'
 import LoginComponent from './LoginComponent'
 import SignUpComponent from './SignUpComponent'
 import SwiperComponent from './SwiperComponent'
+import HomeScreen from './HomeScreen'
 
 const StackNavigator = createStackNavigator({
 
@@ -21,6 +22,12 @@ const StackNavigator = createStackNavigator({
   },
   SignUpScreen: {
     screen: SignUpComponent,
+    navigationOptions: {
+      headerShown: false
+    }
+  },
+  DashboardHome: {
+    screen: HomeScreen,
     navigationOptions: {
       headerShown: false
     }

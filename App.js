@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text, View } from 'react-native';
 import RootStack from './src/RootStack'
+import HomeScreen from './src/HomeScreen';
 
 export default class App extends React.Component {
   render() {
