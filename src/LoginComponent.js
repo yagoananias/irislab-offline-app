@@ -19,8 +19,8 @@ export default class LoginComponent extends React.Component {
   render() {
     return(
       <View style={styles.container}>
-        <Text style={styles.title}>Login</Text>
-        <Text style={styles.text}>Login with email</Text>
+        <Text style={styles.title}>Entrar</Text>
+        <Text style={styles.text}>Entre com seu email</Text>
         <View style={styles.action}>
           <View style={[styles.section, {
             borderColor: this.state.borderColor=="email" ? '#9256b1' : '#777'
@@ -40,7 +40,7 @@ export default class LoginComponent extends React.Component {
           }]}>
             <MaterialIcons name="lock" size={20} color={this.state.borderColor=="password" ? '#9256b1' : '#777'} />
             <TextInput
-              placeholder="Password"
+              placeholder="Senha"
               style={[styles.textInput, {
                 color: this.state.borderColor=="password" ? '#9256b1' : '#777'
               }]}
@@ -56,7 +56,7 @@ export default class LoginComponent extends React.Component {
         <TouchableOpacity
           style={styles.login}
           onPress={() => this.props.navigation.navigate("DashboardHome")}>
-          <Text style={styles.textLogin}>Login</Text>
+          <Text style={styles.textLogin}>Entrar</Text>
         </TouchableOpacity>
 
         <TouchableOpacity

@@ -6,6 +6,8 @@ import LottieView from 'lottie-react-native'
 
 import apolo from '../assets/apolo-animation.json'
 
+let texto = "Buscando apresentar a tecnologia aos pequenos de uma maneira equilibrada, nós da Iris Lab ajudaremos seu filho a desenvolver suas próprias habilidades de forma prática promovendo a união entre a criança, os pais e o ambiente a sua volta."
+
 
 export default class SwiperComponent extends React.Component {
   constructor(props) {
@@ -48,12 +50,13 @@ export default class SwiperComponent extends React.Component {
                     style={styles.image}
                     resizeMode={"stretch"}>
             </Image>
+            <View style={styles.title}>
+            <Text style={styles.title}>Iris Lab</Text>
+            <Text style={styles.text}>{texto}</Text>
+          </View>
           </View>
 
-          <View style={styles.footer}>
-            <Text style={styles.title}>Iris Lab</Text>
-            <Text style={styles.text}>Somos lorem loren</Text>
-          </View>
+          
         </View>
         
         <View style={styles.slide}>
@@ -62,8 +65,8 @@ export default class SwiperComponent extends React.Component {
           </View>
 
           <View style={styles.footer}>
-            <Text style={styles.title}>Olá, eu sou o Apolo!</Text>
-            <Text style={styles.text}>O seu amiguinho :)</Text>
+            <Text style={styles.title}>Conheça o Apolo!</Text>
+            <Text style={styles.text}>E sua turma :)</Text>
           </View>
         </View>
 
@@ -73,8 +76,8 @@ export default class SwiperComponent extends React.Component {
           </View>
 
           <View style={styles.footer}>
-            <Text style={styles.title}>Faça parte!</Text>
-            <Text style={styles.text}>Somos a turma do apolo</Text>
+            <Text style={styles.title}>Entre agora</Text>
+            <Text style={styles.text}>e começe a usar</Text>
             {this.state.show ?
             <View style={{flexDirection: 'row'}}>
               <Animatable.View animation={this.state.animation_signup} delay={0} duration={1500} useNativeDriver>              
@@ -86,7 +89,7 @@ export default class SwiperComponent extends React.Component {
                   borderRadius: 50,
                   marginTop: 15
                 }]}>
-                  <Text style={{color: 'purple'}}>Sign Up</Text>                
+                  <Text style={{color: 'purple'}}>Cadastrar</Text>                
                 </TouchableOpacity>
               </Animatable.View>
               
@@ -99,7 +102,7 @@ export default class SwiperComponent extends React.Component {
                   marginTop: 15,
                   marginLeft: 20
                 }]}>                
-                  <Text style={{color: 'white'}}>Login</Text>                
+                  <Text style={{color: 'white'}}>Entrar</Text>                
                 </TouchableOpacity>
               </Animatable.View>
             </View>
@@ -145,7 +148,8 @@ const styles = StyleSheet.create({
   text: {
     color: 'gray',
     textAlign: 'center',
-    marginTop: 20
+    marginTop: 20,
+    paddingBottom: 10
   },
   dot: {
     backgroundColor: '#9946b1',

@@ -19,8 +19,8 @@ export default class SignUpComponent extends React.Component {
   render() {
     return(
       <View style={styles.container}>
-        <Text style={styles.title}>Sign Up</Text>
-        <Text style={styles.text}>Sign Up with email</Text>
+        <Text style={styles.title}>Cadastrar</Text>
+        <Text style={styles.text}>Insira seus dados</Text>
         <View style={styles.action}>
           <View style={[styles.section, {
             borderColor: this.state.borderColor=="account-circle" ? '#9256b1' : '#777'
@@ -53,7 +53,7 @@ export default class SignUpComponent extends React.Component {
           }]}>
             <MaterialIcons name="lock" size={20} color={this.state.borderColor=="password" ? '#9256b1' : '#777'} />
             <TextInput
-              placeholder="Password"
+              placeholder="Senha"
               style={[styles.textInput, {
                 color: this.state.borderColor=="password" ? '#9256b1' : '#777'
               }]}
@@ -67,7 +67,7 @@ export default class SignUpComponent extends React.Component {
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.login}>
-          <Text style={styles.textLogin}>Sign Up</Text>
+          <Text style={styles.textLogin}>Cadastrar</Text>
         </TouchableOpacity>
         <TouchableOpacity
             style={styles.voltar}
