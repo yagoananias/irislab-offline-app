@@ -1,10 +1,11 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image, Dimensions, TouchableOpacity, ImageBackground } from 'react-native';
+import { Text, View, Image, TouchableOpacity, ImageBackground } from 'react-native';
 import Swiper from 'react-native-swiper'
 import * as Animatable from 'react-native-animatable'
 import LottieView from 'lottie-react-native'
 
-import apolo from '../assets/apolo-animation.json'
+import apolo from '../../assets/apolo-animation.json'
+import styles from '../styles/SwiperStyles'
 
 let texto = "Buscando apresentar a tecnologia aos pequenos de uma maneira equilibrada, nós da Iris Lab ajudaremos seu filho a desenvolver suas próprias habilidades de forma prática promovendo a união entre a criança, os pais e o ambiente a sua volta."
 
@@ -46,7 +47,7 @@ export default class SwiperComponent extends React.Component {
       
         <View style={styles.slide}>
           <View style={styles.header}>
-            <Image source={require("../assets/asset1.png")}
+            <Image source={require("../../assets/asset1.png")}
                     style={styles.image}
                     resizeMode={"stretch"}>
             </Image>
@@ -70,7 +71,7 @@ export default class SwiperComponent extends React.Component {
           </View>
         </View>
 
-        <ImageBackground source={require("../assets/bg3.jpg")} style={styles.slide}>
+        <ImageBackground source={require("../../assets/bg3.jpg")} style={styles.slide}>
           <View style={styles.header}>
             
           </View>
@@ -115,71 +116,4 @@ export default class SwiperComponent extends React.Component {
   }
 }
 
-const { width, height } = Dimensions.get("screen")
-const height_image = height * 0.5 * 0.8
-const width_image = height_image * 1.1
-const width_button = width * 0.3
 
-const styles = StyleSheet.create({
-  slide: {
-    flex: 1,
-    backgroundColor: 'white',
-  },
-  header: {
-    flex: 2,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  footer: {
-    flex: 1,
-    alignItems: 'center',
-    paddingHorizontal: 20
-  },
-  image: {
-    height: height_image,
-    width: width_image
-  },
-  title: {
-    fontSize: 25,
-    fontWeight: 'bold',
-    color: '#9256b1',
-    alignItems: 'center'
-  },
-  text: {
-    color: 'gray',
-    textAlign: 'center',
-    marginTop: 20,
-    paddingBottom: 10
-  },
-  dot: {
-    backgroundColor: '#9946b1',
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    marginHorizontal: 5,
-    marginVertical: 3
-  },
-  activeDot: {
-    backgroundColor: '#5046b1',
-    width: 20,
-    height: 8,
-    borderRadius: 4,
-    marginHorizontal: 5,
-    marginVertical: 3
-  },
-  button: {
-    width: width_button,
-    height: 40,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  bg: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center"
-  },
-  animaApolo: {
-    width: 350,
-    height: 350,    
-  }
-})
